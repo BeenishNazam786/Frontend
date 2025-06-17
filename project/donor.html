@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Become a Donor</title>
+    <link rel="stylesheet" href="donor.css" />
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="icon_blood_2.png" alt="Blood Bank Logo" />
+                <span>Blood Bank</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="donorlist.html">Donor List</a></li>
+                    <li><a href="bloodstock.html">BloodStock</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="donor-section">
+        <div class="container">
+            <h1>Register as a Donor</h1>
+            <p>Join our life-saving mission. Fill the form below to become a donor.</p>
+            <form class="donor-form" onsubmit="handleSubmit(event)">
+                <input type="text" placeholder="Full Name" required>
+                <input type="number" placeholder="Age" required>
+                <select required>
+                    <option value="" disabled selected>Select Gender</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                    <option>Other</option>
+                </select>
+                <select required>
+                    <option value="" disabled selected>Select Blood Group</option>
+                    <option>A+</option>
+                    <option>A-</option>
+                    <option>B+</option>
+                    <option>B-</option>
+                    <option>AB+</option>
+                    <option>AB-</option>
+                    <option>O+</option>
+                    <option>O-</option>
+                </select>
+                <input type="email" placeholder="Email" required>
+                <input type="tel" placeholder="Phone Number" required>
+                <input type="text" placeholder="City" required>
+                <button type="submit" class="btn">Submit</button>
+            </form>
+        </div>
+    </section>
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+            alert("You have registered as a donor. We will contact you soon.");
+            event.target.reset();
+        }
+    </script>
+
+</body>
+
+</html>

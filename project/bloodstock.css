@@ -1,0 +1,173 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #b51217;
+    padding: 10px 0;
+    color: #fff;
+}
+
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 80px;
+    width: auto;
+    margin-right: 20px;
+}
+
+.logo span {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.slider {
+    width: 100%;
+    overflow: hidden;
+    background-color: white;
+    color: #a02a2a;
+    padding: 8px 0;
+
+    font-size: 16px;
+
+    font-weight: bolder;
+    text-align: center;
+}
+
+.slider p {
+    display: inline-block;
+    white-space: nowrap;
+    padding-left: 100%;
+    animation: slide-left 25s linear infinite;
+}
+
+@keyframes slide-left {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.stock-section {
+    padding: 10px 20px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.stock-section h1 {
+    color: #b51217;
+    margin-bottom: 30px;
+}
+
+.stock-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 40px;
+    justify-items: center;
+}
+
+.stock-card {
+    background-color: #fff5f5;
+    border: 1px solid #e0e0e0;
+    border-left: 6px solid #b51217;
+    padding: 20px;
+    width: 280px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s;
+
+}
+
+.stock-card:hover {
+    transform: scale(1.05);
+}
+
+
+.stock-card h3 {
+    margin: 0;
+    font-size: 22px;
+    color: #b51217;
+}
+
+.stock-card p {
+    margin: 5px 0 0;
+    font-weight: bold;
+}
+
+
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: row;
+        align-items: center;
+        gap: 15px;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    nav ul {
+        justify-content: center;
+        gap: 15px;
+        flex-direction: row;
+    }
+
+    nav a {
+        font-size: 18px;
+    }
+
+    .logo {
+        justify-content: center;
+    }
+
+    .logo span {
+        font-size: 24px;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .stock-grid {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 20px;
+        gap: 20px;
+    }
+}
